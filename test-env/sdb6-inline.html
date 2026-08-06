@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+<body>
+<button id="topButton" type="button" style="display:block;margin:12px;padding:8px 16px;font-size:14px;cursor:pointer;">
+	Button
+</button>
+<script type='text/javascript'>
+	document.getElementById('topButton').addEventListener('click', function () {
+		alert('Button clicked!');
+	});
+
+	function initEmbeddedMessaging() {
+		try {
+			agentforce_messaging.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+      agentforce_messaging.settings.displayMode = "inline";
+
+			agentforce_messaging.init(
+				'00DSG00000qm0Cf',
+				'CWC',
+				'https://orgfarm-56a5d701be.test1.my.pc-rnd.site.com/ESWCWC1780962347425',
+				{
+					scrt2URL: 'https://orgfarm-56a5d701be.test1.my.pc-rnd.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-56a5d701be.test1.my.pc-rnd.site.com/ESWCWC1780962347425/assets/js/init.js' onload='initEmbeddedMessaging()'></script>
+</body>
+</html>
