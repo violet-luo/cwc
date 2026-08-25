@@ -1,15 +1,22 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<style>
+		#chat-container { width: 400px; height: 600px; border: 1px solid #ccc; }
+	</style>
 </head>
 <body>
-	
+	<a href="#before">BEFORE — Shift+Tab 应该跳到这里</a>
+	<div id="chat-container"></div>
+	<button id="after">AFTER — Tab 应该跳到这里</button>
 <script type='text/javascript'>
 	function initAgentforceMessaging() {
 		try {
-			agentforce_messaging.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			agentforce_messaging.settings.language = 'en_US';
 			agentforce_messaging.settings.displayMode = "inline";
-			
+			// 必须在 init() 之前设置
+			agentforce_messaging.settings.targetElement = document.getElementById('chat-container');
 			agentforce_messaging.init(
 				'00DSB00000c9EE1',
 				'CWC_Channel',
