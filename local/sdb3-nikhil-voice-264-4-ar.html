@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+<body>
+	
+<script type='text/javascript'>
+	function initAgentforceMessaging() {
+		try {
+			agentforce_messaging.settings.language = 'ar'; // For example, enter 'en' or 'en-US'
+
+			agentforce_messaging.init(
+				'00DSB00000zrTLk',
+				'cwc_1',
+				'https://orgfarm-c114ea45f5.my.site-com.fdc1ravciz5k0r8tgrqg0b7lk1ee.wa.crm.dev:6101/ESWCWC1788979198945',
+				{
+					scrt2URL: 'https://orgfarm-2ebbae7319.demo.test1.my.pc-rnd.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-c114ea45f5.my.site-com.fdc1ravciz5k0r8tgrqg0b7lk1ee.wa.crm.dev:6101/ESWCWC1788979198945/assets/js/init.js' onload='initAgentforceMessaging()'></script>
+</body>
+</html>
