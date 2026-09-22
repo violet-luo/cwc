@@ -1,26 +1,19 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<style>
-		#chat-container { width: 400px; height: 600px; border: 1px solid #ccc; }
-	</style>
 </head>
 <body>
-	<a href="#before">BEFORE — Shift+Tab should be here</a>
-	<div id="chat-container"></div>
-	<button id="after">AFTER — Tab should be here</button>
+	
 <script type='text/javascript'>
 	function initAgentforceMessaging() {
 		try {
-			agentforce_messaging.settings.language = 'ar';
-			agentforce_messaging.settings.displayMode = "inline";
-			
-			agentforce_messaging.settings.targetElement = document.getElementById('chat-container');
+			agentforce_messaging.settings.language = 'ar'; // For example, enter 'en' or 'en-US'
+      		agentforce_messaging.settings.displayMode = "inline";
+
 			agentforce_messaging.init(
 				'00DSB00000c9EE1',
 				'CWC_Channel',
-				'https://orgfarm-269c85bbd8.my.site-com.w423wcsckpeg1zm2seu7c65.wa.crm.dev:6101/ESWCWC1781737168804',
+				'https://orgfarm-c114ea45f5.my.site-com.fdc1ravciz5k0r8tgrqg0b7lk1ee.wa.crm.dev:6101/ESWCWC1788979198945',
 				{
 					scrt2URL: 'https://orgfarm-099fc90853.test1.my.pc-rnd.salesforce-scrt.com'
 				}
@@ -30,6 +23,6 @@
 		}
 	};
 </script>
-<script type='text/javascript' src='https://orgfarm-269c85bbd8.my.site-com.w423wcsckpeg1zm2seu7c65.wa.crm.dev:6101/ESWCWC1781737168804/assets/js/init.js' onload='initAgentforceMessaging()'></script>
+<script type='text/javascript' src='https://orgfarm-c114ea45f5.my.site-com.fdc1ravciz5k0r8tgrqg0b7lk1ee.wa.crm.dev:6101/ESWCWC1788979198945/assets/js/init.js' onload='initAgentforceMessaging()'></script>
 </body>
 </html>
