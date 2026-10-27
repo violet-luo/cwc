@@ -1,0 +1,28 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+<body>
+	
+<script type='text/javascript'>
+	function initAgentforceMessaging() {
+		try {
+			agentforce_messaging.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+      agentforce_messaging.settings.hideChatButtonOnload = true;
+
+			agentforce_messaging.init(
+				'00DSG00000lw4L7',
+				'AgentAvailability_MIAW_Channel',
+				'https://orgfarm-d0b2ffe07b.my.site-com.brusfny1al2y05tslnkayvdcc09oj4w.wa.crm.dev:6101/ESWCWC1792535296104',
+				{
+					scrt2URL: 'https://orgfarm-4d7f1c7065.demo.test1.my.pc-rnd.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-d0b2ffe07b.my.site-com.brusfny1al2y05tslnkayvdcc09oj4w.wa.crm.dev:6101/ESWCWC1792535296104/assets/js/init.js' onload='initAgentforceMessaging()'></script>
+</body>
+</html>
